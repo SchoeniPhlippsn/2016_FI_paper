@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a template file for Web of Conferences Journal
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%% EDP Science %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%\documentclass[option comma separated list]{webofc}
+%%%Three important options:
+%%% "epj" for EPJ Web of Conferences Journal
+%%% "bio" for BIO Web of Conferences Journal
+%%% "mat" for MATEC Web of Conferences Journal
+%%% "itm" for ITM Web of Conferences Journal
+%%% "e3s" for E3S Web of Conferences Journal
+%%% "shs" for SHS Web of Conferences Journal
+%%% "twocolumn" for typesetting an article in two columns format (default one column)
+\documentclass[epj,twocolumn]{webofc}
+\usepackage[varg]{txfonts}   % Web of Conferences font
+%
+% Put here some packages required or/and some personnal commands
+\usepackage{adjustbox}
+\usepackage{url}
+\usepackage{import}
+\usepackage{xcolor}
+%
+% Important: please activate and fill the "wocname" command with the exact title of the series for conferences not included in any of the series listed on the top
+%
+%\wocname{?????????}
+%
+% Very important: please fill the "woctitle" command with the exact title of the conference
+%
+\woctitle{Focus Interface}
+%
+%
+\begin{document}
+%
+\title{Pomelo}
+%
+% subtitle is optionnal
+%
+\subtitle{Generic Set Voronoi Diagrams of Aspherical Particles of Arbitrary Shape}
+%\subtitle{A Generic Set Voronoi Tool}
+
+\author{\firstname{Philipp} \lastname{Schönhöfer}\inst{1, 2}\fnsep\thanks{\email{philipp.schoenhoefer@fau.de}} \and
+        \firstname{Laurence} \lastname{Ellison}\inst{3}\and 
+        \firstname{Matthieu} \lastname{Marechal}\inst{1}\and
+        \firstname{Douglas} \lastname{Cleaver}\inst{3}\and
+        \firstname{Gerd} \lastname{Schröder-Turk}\inst{2}
+        % etc.
+}
+
+\institute{Institut für Theoretische Physik I, Universität Erlangen-Nürnberg, Staudtstraße 7, 91058 Erlangen, Germany
+\and
+           School of Engineering and Information Technology, Murdoch University, 90 South Street, Murdoch, WA 6150, Australia
+\and
+           Materials and Engineering Research Institute, Sheffield Hallam University, Sheffield S1 1WB, United Kingdom 
+          }
+
+\abstract{%
+}
+%
+\maketitle
+%
+
+
+\section{Introduction}
+\label{sec:Intro}
+
+\begin{itemize}
+    \item Lipids and proteins form minimal surfaces like the Gyroid and the Diamond surface structures
+    \item nanostructures have for example special photonic properties (color caused by structure/ butterfly)
+    \item Lipids are amphiphilic molecules interacting with solvent and other lipids in a long range manner.
+    \item what is the influence of particle shape (so purely entropicly driven systems)
+    \item liquid crystals and Hard spheres try to maximize entropy $\Rightarrow$ order
+    \item lipids discribed by cones
+    \item Laurence and Doug simulated hard pear-shaped particles forming the gyroid
+    \item want to generate the phase diagram and analyze gyroid phase geometrically
+\end{itemize}
+
+\section{Gyroid Unit Cell}
+\label{sec:UnitCell}
+
+\begin{itemize}
+    \item 10000 particle system
+    \item Clustering the systems show channel systems
+    \item scattering functons (fft) reveal number of particles within one unit cell
+    \item Consequently latticesize of the gyroid phase is determined ("width" of the gyroid phase)
+\end{itemize}
+
+\section{Phase Diagram}
+\label{sec:PhaseDiagram}
+
+\begin{itemize}
+    \item different degrees of tappering
+    \item from lamella phase into lower density phases (nematic, gyroid, anisotropic)
+    \item showing different pictures of the system
+\end{itemize}
+
+\section{Geometrical Analysis}
+\label{sec:GeometricalAnalysis}
+
+\begin{itemize}
+    \item distance between sheets (longitudinal distribution function)
+    \item Mean square displacement
+    \item Voronoi tessellation (POMELO)
+    \item comparisson between Gaussian curvature of gyroid and Volume/Surface of Voronoi cell and distance respectively
+    \item maximizing the degrees of freedom in system (standard variation of Voronoi volume)
+\end{itemize}
+
+\section{Conclussion}
+\label{sec:Conclussion}
+
+\begin{itemize}
+    \item entropy plays important role
+\end{itemize}
+
+\section{Methods}
+\label{sec:Methods}
+
+\begin{itemize}
+    \item particle shape
+    \item potential
+\end{itemize}
+
+\section*{Acknowledgements and References}
+%
+% BibTeX or Biber users please use (the style is already called in the class, ensure 
+% that the "woc.bst" style is in your local directory)
+% \bibliography{name or your bibliography database}
+%
+% Non-BibTeX users please use
+%
+\begin{thebibliography}{}
+%
+% and use \bibitem to create references.
+%
+% Format for Journal Reference
+%Journal Author, Journal \textbf{Volume}, page numbers (year)
+\bibitem{RefBarmes} 
+F. Barmes, M. Ricci, C. Zannoni and D.~J. Cleaver, Phys. Rev. E. \textbf{68}, 021708 (2003).\\
+
+\bibitem{RefSchaller2015}
+    F.~M. Schaller, S.~C. Kapfer, J.~E. Hilton \textit{et al.}, EPL \textbf{111}, 24002 (2015)\\
+
+\bibitem{RefSchaller2013}
+    F.~M. Schaller, S.~C. Kapfer, M.~E. Evans \textit{et al.}, Philosophical Magazine \textbf{93}, 3993-4017 (2013)\\
+
+\bibitem{RefLuchnikov}
+    V. Luchnikov, N. Medvedev, L. Oger and J. Troadec, Phys. Rev. E \textbf{59}, 7205 (1999)\\
+
+\bibitem{RefPreteux}
+    E. Preteux, J. Math. Imaging Vision \textbf{1}, 239 (1992)\\
+
+\bibitem{RefAste}
+T. Aste, T. Di Matteo, M. Saadatfar, T.~J. Senden, M. Schröter, H.~L. Swinney, EPL \textbf{79}, 24003 (2007)\\
+
+\bibitem{RefPomeloDownload} 
+\verb~http://theorie1.physik.uni-erlangen.de/~\\\verb~research/pomelo/index.html~\\
+
+\bibitem{RefLua} 
+\verb~https://www.lua.org/~\\
+
+\bibitem{RefEllison} 
+L.~J. Ellison, D.~J. Michel, F. Barmes, and D.~J. Cleaver, Phys. Rev. Lett. \textbf{97}, 237801 (2006)\\
+%\verb~http://theorie1.physik.uni-erlangen.de/research/pomelo/index.html~\\
+% Format for books
+%\bibitem{RefB}
+%Book Author, \textit{Book title} (Publisher, place, year) page numbers
+% etc
+\end{thebibliography}
+
+\end{document}
+
+% end of file template.tex
