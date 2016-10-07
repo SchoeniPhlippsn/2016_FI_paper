@@ -36,12 +36,7 @@
 %
 \begin{document}
 %
-\title{Pomelo}
-%
-% subtitle is optionnal
-%
-\subtitle{Generic Set Voronoi Diagrams of Aspherical Particles of Arbitrary Shape}
-%\subtitle{A Generic Set Voronoi Tool}
+\title{A Bicontinuous Gyroid-Phase in Purely Entropic Self-Assembly of Hard Pears}
 
 \author{\firstname{Philipp} \lastname{Schönhöfer}\inst{1, 2}\fnsep\thanks{\email{philipp.schoenhoefer@fau.de}} \and
         \firstname{Laurence} \lastname{Ellison}\inst{3}\and 
@@ -71,38 +66,55 @@
 The analysis of structures and patterns in living organisms is one of the most significant tasks in biology. Especially the formation mechanisms of macroscopic structures out of microscopic molecules is of great interest. In recent 
 years scientist discovered more and more lipid systems which form so called minimal surface phases. These bicontinous, triply periodic structures also draw the attention of physcisist as these nanostrutures cause for instance special 
 photonic effects as iridescence \cite{}. One prominent example of these structures is the \textit{Ia3d double gyroid}. Here mixtures of lipids and solvent generate next to micella and lamella structures also the gyroid surface.
-In this case it is often assumed that the amphiphilic features of the lipid molecules and consequently the long range interactions are the most important and driving aspects of this self-assembly. However, entropy is another major 
-factor which influences many systems in statistical physics. The paradigms where order is entropically driven only by the shape of the particles is the hard sphere model and liquid crystal systems in general. In regard to the hard 
-sphere model the system maximizes the entropy by placing the spheres in a lattice arrangement. The nematic and smectic phase can be explained in a similar fashion for hard rods. The significance of shape is also implied in the analysis
-of the gyroid phase. Lipids which form the gyroid surface are often sketched as cones. Whereas in the lamella phase the molecules are considered as cylinders. Inspired by this and the previous results of Ellison et al. \cite{} we want 
-to concentrate on hard pear shaped liquid crystals. Using Molecular Dynamics symulation techniques Ellison could show numerically that hard tappared particles can form the double gyroid next to the lamella and isotropic phase. 
+In this case it is often assumed that the amphiphilic features of the lipid molecules and consequently the long range interactions are the most important and driving aspects of this self-assembly. Consequently, most of the published 
+particle simulations contain attratcive particle interactions \cite{}.\\
 
-In the following we carry this idea forward and introduce the phase diagram of pear-shaped particles in section \ref{sec:PhaseDiagram}. Additionally the system is analyzes geometrically to determine the size of the particles and the 
-correlations between the gyroid surface and the pears in section \ref{sec:GeometricalAnalysis}.
+However, entropy is another major factor which influences many systems in statistical physics. The paradigms where the configuration of the particles is entropically driven only by the particle's shape is the hard sphere model and 
+liquid crystal systems in general. The special attribute of those systems just interacting via collision is the constant potential energy for all times. As a consequence the Helmholtz free energy $F=U-T\cdot S$ is just governed purely 
+by entropy $S$. In regard to the hard sphere model the system maximizes entropy by placing the spheres in a lattice arrangement and thus, causing a transition form an anisotropic to a phase of long ranged tranlational order. The 
+transitions to nematic and smectic phases which are characterized by a long rangig orientationla order can be explained in a similar fashion by entropy for hard rods.\\
 
-\begin{itemize}
-    \item Lipids and proteins form minimal surfaces like the Gyroid and the Diamond surface structures
-    \item nanostructures have for example special photonic properties (color caused by structure/ butterfly)
-    \item Lipids are amphiphilic molecules interacting with solvent and other lipids in a long range manner.
-    \item what is the influence of particle shape (so purely entropicly driven systems)
-    \item liquid crystals and Hard spheres try to maximize entropy $\Rightarrow$ order
-    \item lipids discribed by cones
-    \item Laurence and Doug simulated hard pear-shaped particles forming the gyroid
-    \item want to generate the phase diagram and analyze gyroid phase geometrically
-\end{itemize}
+The significance of shape is also implied in the analysis of the gyroid phase in biological systmes. Lipids which form the gyroid surface are often sketched as cones. Whereas in the lamella phase the molecules are considered as
+cylinders. Inspired by this attempt to explain the induced curvature of the gyroid phase and the previous results of Ellison et al. \cite{} we want to concentrate on hard pear shaped liquid crystals. Using Molecular Dynamics 
+simulation techniques Ellison could show numerically that hard pears can form the double gyroid next to the smectic and isotropic phase.\\
 
-\section{Gyroid Unit Cell}
-\label{sec:UnitCell}
+A particle is considered as "pear-shaped" if it is elongated and tappered. The ellongation is charactereized by the aspect ratio $k$, whereas the tapperdness is 
+described by the degree of tappering $k_{\theta}$. The lower the value of $k_{\theta}$ the pointier the pear gets towards one end. This means that for a high degree of tappering the particle shape converges more and more towards an
+ellipsoid. Exploiting the rotational symetry the pear can explained by a set of two Bezier-curves.\\
 
+To simulate a system of those particles we both use Molecular Dynamics and Monte Carlo algorithm techniques. The applied potential for a hard core interaction of pears is a modified version of the Weeks-Chandler-Anderson potential 
+(WCA), which is also known as the parametric hard Gaussian overlap (PHGO) approximation. The PHGO model is grounded on the fact that convex particles like can be well
+locally approximated by ellipsoids. To ensure the convexity of the particle its shape is described by two continously differential Bezier-curves in due consideration of the rotational symmetrie of the pears. However, the size and 
+aspect ratio of these ellipsoids depend on the relative positions and orientation of the particles. The PHGO model and the pear-potential is described in great detail in Ref. \ref{}.
+
+In the following we carry this idea forward and introduce the phase diagram of pear-shaped particles in regard to the global density and the degree of tappering in section \ref{sec:PhaseDiagram}. We then concentrate on the gyroid phase
+of different pear systems. Here the gyroid structures are analyzed geometrically to determine the periodicity and therefore the "width" of the gyroid phase. In particular Set Voronoi Tessellation is used to determine local features
+and correlations between the gyroid surface and the pears in section \ref{sec:GeometricalAnalysis}.
+%
+%\begin{itemize}
+%    \item Lipids and proteins form minimal surfaces like the Gyroid and the Diamond surface structures
+%    \item nanostructures have for example special photonic properties (color caused by structure/ butterfly)
+%    \item Lipids are amphiphilic molecules interacting with solvent and other lipids in a long range manner.
+%    \item what is the influence of particle shape (so purely entropicly driven systems)
+%    \item liquid crystals and Hard spheres try to maximize entropy $\Rightarrow$ order
+%    \item lipids discribed by cones
+%    \item Laurence and Doug simulated hard pear-shaped particles forming the gyroid
+%    \item want to generate the phase diagram and analyze gyroid phase geometrically
+%\end{itemize}
+
+
+
+\section{Phase Diagram}
+\label{sec:PhaseDiagram}
+
+In previous studies using compuatational techniques some shapes of pears were covered. So showed Brames that for slightly tappered particles with aspect ratio $k=5$the nematic, bilayer smectic and cristalline phase is formed \cite{}.
+Ellison also concentrated just on one particular type of pear with $k=3$ and $k_{\theta}=3.8$. With this configuration the gyroid phase could be determined. 
 \begin{itemize}
     \item 10000 particle system
     \item Clustering the systems show channel systems
     \item scattering functons (fft) reveal number of particles within one unit cell
     \item Consequently latticesize of the gyroid phase is determined ("width" of the gyroid phase)
 \end{itemize}
-
-\section{Phase Diagram}
-\label{sec:PhaseDiagram}
 
 \begin{itemize}
     \item different degrees of tappering
