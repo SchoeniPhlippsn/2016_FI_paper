@@ -16,7 +16,7 @@
 %%% "e3s" for E3S Web of Conferences Journal
 %%% "shs" for SHS Web of Conferences Journal
 %%% "twocolumn" for typesetting an article in two columns format (default one column)
-\documentclass[epj,twocolumn]{webofc}
+\documentclass[epj,onecolumn]{webofc}
 \usepackage[varg]{txfonts}   % Web of Conferences font
 %
 % Put here some packages required or/and some personnal commands
@@ -64,32 +64,32 @@
 \label{sec:Intro}
 
 The analysis of structures and patterns in living organisms is one of the most significant tasks in biology. Especially the formation mechanisms of macroscopic structures out of microscopic molecules is of great interest. In recent 
-years scientist discovered more and more lipid systems which form so called minimal surface phases. These bicontinous, triply periodic structures also draw the attention of physicist as these nanostructures cause for instance
-special photonic effects as iridescence \cite{}. One prominent example of these structures is the \textit{Ia3d double gyroid}. Here mixtures of lipids and solvent generate next to micella and lamella structures also the gyroid surface.
-In this case it is often assumed that the amphiphilic features of the lipid molecules and consequently the long range interactions are the most important and driving aspects of this self-assembly. Consequently, most of the published 
-particle simulations contain attractive particle interactions \cite{}.\\
+years scientist discovered more and more lipid systems which form so called minimal surface phases. These bicontinuous, triply periodic structures also draw the attention of physicist as these nanostructures cause for instance
+special photonic effects as iridescence \cite{}. One prominent example of these structures is the \textit{Ia3d double gyroid}. Here often mixtures of lipids and solvent generate next to micellar and lamella structures also the gyroid 
+surface. In this case it is often assumed that the amphiphilic features of the lipid molecules and consequently the long range interactions are the most important and driving aspects of this self-assembly. Consequently, most of the 
+published particle simulations contain attractive particle interactions \cite{}.\\
 
-However, entropy is another major factor which influences many systems in statistical physics. The paradigms where the configuration of the particles is entropically driven only by the particle's shape is the hard sphere model and 
-liquid crystal systems in general. The special attribute of those systems just interacting via collision is the constant potential energy for all times. As a consequence the Helmholtz free energy $F=U-T\cdot S$ is just governed purely 
-by entropy $S$. In regard to the hard sphere model the system maximizes entropy by placing the spheres in a lattice arrangement and thus, causing a transition form an anisotropic to a phase of long ranged translational order. The 
-transitions to nematic and smectic phases which are characterized by a long ranging orientational order can be explained in a similar fashion by entropy for hard rods.\\
+However, entropy is another major factor which influences many systems in statistical physics. The paradigms where the configuration of the particles is entropically driven only by the particles shape is the hard sphere model 
+and liquid crystal systems in general. The special attribute of those systems just interacting via collision is the constant potential energy for all times. As a consequence the Helmholtz free energy $F=U-T\cdot S$ is just governed 
+purely by entropy $S$. In regard to the hard sphere model the system maximizes entropy by placing the spheres in a lattice arrangement and thus, causing a transition form an anisotropic to a phase of long ranged translational 
+order. The transitions to nematic and smectic phases of hard rods which are characterized by a long ranging orientational order can be explained in a similar fashion by entropy.\\
 
-The significance of shape is also implied in the analysis of the gyroid phase in biological systems. Lipids which form the gyroid surface are often sketched as cones. Whereas in the lamella phase the molecules are considered as
-cylinders. Inspired by this attempt to explain the induced curvature of the gyroid phase and the previous results of Ellison et al. \cite{} we want to concentrate on hard pear shaped liquid crystals. Using Molecular Dynamics 
+The significance of shape is also implied in the analysis of the gyroid phase in biological systems. Lipids which form the gyroid surface are often sketched as cones, whereas in the lamella phase the molecules are considered 
+as cylinders. Inspired by this attempt to explain the induced curvature of the gyroid phase and the previous results of Ellison et al. \cite{} we want to concentrate on hard pear shaped liquid crystals. Using Molecular Dynamics 
 simulation techniques Ellison could show numerically that hard pears can form the double gyroid next to the smectic and isotropic phase.\\
 
-A particle is considered as "pear-shaped" if it is elongated and tapered. The elongation is characterized by the aspect ratio $k$, whereas the taperdness is described by the degree of tapering $k_{\theta}$. The lower the value of 
-$k_{\theta}$ the pointier the pear gets towards one end. This means that for a high degree of tapering the particle shape converges more and more towards an ellipsoid. Exploiting the rotational symmetry the pear can be characterized by 
-a set of two Bezier-curves.\\
+A particle is considered as "pear-shaped" if it is elongated and tapered. The elongation is characterized by the aspect ratio $k$, whereas the "pointiness" is quantified by the degree of tapering $k_{\theta}$. The lower the value of 
+$k_{\theta}$ the sharper the pear becomes in tapering towards one end. This means that for a high degree of tapering the particle shape converges more and more towards an ellipsoid. Exploiting the rotational symmetry the 
+pear can be characterized by a set of two Bezier-curves.\\
 
 To simulate a system of those particles we both use Molecular Dynamics and Monte Carlo algorithm techniques. The applied potential for a hard core interaction of pears is a modified version of the Weeks-Chandler-Anderson 
-potential (WCA), which is also known as the parametric hard Gaussian overlap (PHGO) approximation. The PHGO model is grounded on the fact that convex particles like can be well locally approximated by ellipsoids. To ensure 
-the convexity of the particle its shape is described by two countinously differential Bezier-curves in due consideration of the rotational symmetry of the pears. However, the size and aspect ratio of these ellipsoids depend on the 
-relative positions and orientation of the particles. The PHGO model and the pear-potential is described in great detail in Ref. \cite{}.
+potential (WCA), which is also known as the parametric hard Gaussian overlap (PHGO) approximation. The PHGO model is based on the fact that convex particles can be well locally approximated by ellipsoids. To 
+ensure the convexity of the particle its shape is described by two countiniously differential Bezier-curves in due consideration of the rotational symmetry of the pears. However, the size and aspect ratio of these ellipsoids depend 
+on the relative positions and orientation of the particles. The PHGO model and the pear-potential is described in great detail in Ref. \cite{}.
 
-In the following we carry this idea forward and introduce the phase diagram of pear-shaped particles in regard to the global density and the degree of tapering in section \ref{sec:PhaseDiagram}. We then concentrate on the gyroid 
-phase of different pear systems. Here the gyroid structures are analyzed geometrically to determine the periodicity and therefore the "width" of the gyroid phase. In particular Set Voronoi Tessellation is used to determine local 
-features and correlations between the gyroid surface and the pears in section \ref{sec:GeometricalAnalysis}.
+In the following we carry this idea forward and introduce the phase diagram of pear-shaped particles in regard to the global density and the degree of tapering in section \ref{sec:PhaseDiagram}. We then concentrate on the 
+gyroid phase of different pear systems. Here the gyroid structures are analyzed geometrically to determine the periodicity and therefore the "width" of the gyroid phase. In particular Set Voronoi Tessellation is used to determine 
+local features and correlations between the gyroid surface and the pears in section \ref{sec:GeometricalAnalysis}.
 
 %
 %\begin{itemize}
@@ -108,32 +108,59 @@ features and correlations between the gyroid surface and the pears in section \r
 \section{Phase Diagram}
 \label{sec:PhaseDiagram}
 
-In previous studies using computational techniques some shapes of pears were covered. So showed Brames that for slightly tapered particles with aspect ratio $k=5$ the nematic, bilayer smectic and crystaline phase is formed 
-\cite{}. Ellison also concentrated specifically on one particular type of pear with $k=3$ and $k_{\theta}=3.8$. He showed for this configuration a transition from the lamella to the gyroid phase by reducing the global density of the 
-system and hinted that this phase transition also occurs in a narrow range of $3\leq k_{\theta}\leq 4.4$. To analyze the gyroid structure in section \ref{sec:GeometricalAnalysis} we determine in the following the phases of the
-particles around the gyroid phase in much more detail. Here simulations of 3000 particles with $k_{\theta}$ between $2$ and $6$ within are cubic box are performed. The systems are first quickly compressed from a low density 
-state ($\rho_g=$) within the anisotropic phase to the crystalline phase ($\rho_g=$) where the particles form rigid sheets of bilayers without any diffusion of the particles within the simulation box. Afterwards a sequence of 
-consecutive small and slow decompressions is performed. At every stage we let the system equilibrate and gain the configurations after 1000000 steps. The exact values of $\rho_g$ can be determined in Figure \ref{fig:}. The 
-decompression stops when the system reaches a global density of $\rho_g=$. The whole phase diagram is shown in Figure \ref{}. Indeed the same phase diagram can be reproduced by a sequence of compressions from the 
-anisotropic phase. However, especially the gyroid structure and the smectic alignment of the pear particles need more than $10^7$ steps to equilibrate at the phase transitions compared to the rather quick equilibration from decompression with around 500000 steps. 
+In previous studies using computational techniques some shapes of pears were covered. So showed Brames that for slightly tapered particles with aspect ratio $k=5$ the nematic, bilayer smectic and crystalline phase is formed 
+\cite{}. Ellison also concentrated specifically on one type of pear in particular with $k=3$ and $k_{\theta}=3.8$. He showed for this configuration a transition from the lamella to the gyroid phase by reducing the global density of 
+the system and hinted that this phase transition also occurs in a narrow range of $3\leq k_{\theta}\leq 4.4$ at a global density of $\rho_g=0.53$. To analyze the gyroid structure in section \ref{sec:GeometricalAnalysis} we 
+determine in the following the phases of the particles around the gyroid phase in much more detail.\\
+
+Here simulations of 3000 particles with $k_{\theta}$ between $3$ and $6$ within a cubic box with periodic boundary conditions are performed. Why we use this particular amount of particles for this simulations weill be explained 
+later in section \ref{sec:GeometricalAnalysis}. The lower boundary of $k_{\theta}=3$ is set because for smaller degrees of tapering the particles becomes concave. The systems are first quickly compressed from a low density 
+state ($\rho_g=0.28$) within the isotropic phase to the crystalline phase ($\rho_g=0.61$) where the particles form rigid sheets of bilayers without any diffusion of the particles within the simulation box. Afterwards a sequence of 
+consecutive small and slow decompressions by $\Delta\rho_g\approx 0.02$ is performed. At every stage the system is equilibrated such that we gain significant configurations after 150000 steps. The exact values of $\rho_g$ 
+can be determined in Figure \ref{fig:}. The decompression stops when the system reaches a global density of $\rho_g=0.45$. The whole phase diagram is shown in Figure \ref{}. The same phase diagram can be reproduced by a 
+sequence of compressions from the anisotropic phase as well. However, especially the gyroid structure and the smectic alignment of the pear particles need more than $10^7$ steps to equilibrate at the phase transitions 
+compared to the rather quick equilibration from decompression with around 1200000 steps at maximum.
+
+\subsection{Small degree of tapering}
+\label{sec:Small_k_theta}
+
+The phase diagram can be divided into two parts regarding the particle shape. For small degrees of tapering between $k_{\theta}=3.0$ and $k_{\theta}=4.4$ the system passes through the solid-crystalline, smectic lamella, 
+gyroid and isotropic phase during the decompression. As shown in Figure \ref{}a in the solid-crystalline phase layers of intertwining sheets are formed, where all particles are  orientationally aligned either parallel or antiparallel. 
+Additionally this phase is characterized by the immobility of the pears such that the sheets are rigid and constant in time. At a density between $\rho_g=0.572$ ($k_{\theta}=3.0$) and $\rho_g=0.583$ ($k_{\theta}=4.4$) the 
+system transitions  to the smectic phase.  Though the system still exhibits the lamella structure of intertwining sheets with long range translative and orientational order, the pears start to diffuse through the box and are not 
+positionally fixed. Occasionally pears even flip form one into a neighboring sheet. This change of mobility also can be observed in the mean square displacement (see Figure \ref{}).\\
+
+The smectic phase changes into the gyroid phase at a density between $\rho_g=0.511$ ($k_{\theta}=3.0$) and $\rho_g=0.555$ ($k_{\theta}=4.4$), with the density range of systems forming the gyroid becomes sharper for more 
+strongly tapered particles. In this phase the planar sheets turn into two channel systems (see Figure \ref{}) which traverse the simulation box in all three directions. Next to this bicontinuity and the triply periodicity both channel 
+systems display nodes with three branches which are characteristic for the double gyroid. The orientational order drops away. The phase, however, is analyzed in greater detail in section \ref{sec:GeometricalAnalysis}. By 
+observing the mean square displacement again (see Figure \ref{}) and consulting the excess pressure as well (see Figure \ref{}) the transition density can be determined exactly. One the one hand the mean square displacement 
+increases with a much higher fashion by decreasing the density. This can be explained by the fact that the particles do not just move within the sheet with occasional flips but are less restricted within the two channels. The pears 
+also change clusters much more frequently. On the other hand the pressure exhibits a bump at the transition. We observe the same mechanisms of converting the lamella structure into the gyroid as mentioned in an earlier paper 
+\cite{}.  Induced by spontaneous flips of pears from one sheet into another, different layers start to merge and generate curvature within the bilayers.\\
+
+From a density of $\rho_g=0.505$ ($k_{\theta}=3.0$) and $\rho_g=0.522$ ($k_{\theta}=4.4$), respectively,  downwards the system looses its long range correlations completely and can not be clustered into two large channel 
+systems anymore. The particles can now move in any direction (see Figure \ref{}), whereas the pressure shows another bump. Especially for smaller values of $k_{\theta}$, however, this becomes harder to observe due to the 
+narrower density range over which the gyroid structure can form before reaching the isotropic phase.
+
+\subsection{High degree of tapering}
+\label{sec:High_k_theta}
+
+For $k_{\theta}>4.4$ the systems pass 4 different phases as well. However, next to the solid-crystalline, smectic-lamella and isotropic phase the gyroid is replaced by the nematic phase. The nematic phase integrates in phase digram very smoothly which can be seen by the mean square displacement and the excess pressure in Figure \ref{}. For both of these observables the behavior does not differ which makes it unable to locate the change from gyroid to nematic this way. By observing the structures, however, one notices that the bilayers are not able to connect anymore but  break in small patches with orientational order instead, which is characteristic for nematic structures. In the isotropic phase these patches then collapse completely. The smectic phase here becomes more and more narrow for higher values of $k_{\theta}$. This behavior coincides with the expectation that for particles with $k_{\theta}\rightarrow\infty$, which basically represent ellipsoids, the smectic phase disappears completely and the systems immediately transitions from the solid to the nematic phase \cite{}. 
 
 \begin{itemize}
     \item 10000 particle system
     \item Clustering the systems show channel systems
-    \item scattering functions (fft) reveal number of particles within one unit cell
-    \item Consequently lattice size of the gyroid phase is determined ("width" of the gyroid phase)
-\end{itemize}
-
-\begin{itemize}
     \item different degrees of tapering
     \item from lamella phase into lower density phases (nematic, gyroid, anisotropic)
     \item showing different pictures of the system
 \end{itemize}
 
-\section{Geometrical Analysis}
+\section{Geometrical Analysis of the Gyroid Structure}
 \label{sec:GeometricalAnalysis}
 
 \begin{itemize}
+    \item scattering functions (fft) reveal number of particles within one unit cell
+     \item Consequently lattice size of the gyroid phase is determined ("width" of the gyroid phase)
     \item distance between sheets (longitudinal distribution function)
     \item Mean square displacement
     \item Voronoi tessellation (POMELO)
